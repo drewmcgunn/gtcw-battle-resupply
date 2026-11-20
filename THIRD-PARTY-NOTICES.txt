@@ -1,0 +1,14 @@
+Battle Resupply's full download includes BepInEx 5.4.23.5, unmodified, from
+https://github.com/BepInEx/BepInEx/releases/tag/v5.4.23.5
+
+BepInEx is licensed under the GNU Lesser General Public License v2.1.
+  License: BepInEx/LICENSE.txt in the full download (also https://github.com/BepInEx/BepInEx/blob/master/LICENSE)
+  Source:  https://github.com/BepInEx/BepInEx
+
+BepInEx includes:
+  HarmonyX (MIT)          https://github.com/BepInEx/HarmonyX
+  MonoMod (MIT)           https://github.com/MonoMod/MonoMod
+  Mono.Cecil (MIT)        https://github.com/jbevain/cecil
+  UnityDoorstop (LGPL-2.1) https://github.com/NeighTools/UnityDoorstop
+
+Battle Resupply itself is MIT licensed; see LICENSE.
