@@ -1,17 +1,17 @@
 # Battle Resupply
 
-A mod for **Grand Tactician: The Civil War (1861-1865)** that lets regiments resupply their ammunition *during* the
+A mod for **Grand Tactician: The Civil War (1861-1865)** that lets brigades resupply their ammunition *during* the
 battle day, not only at nightfall. It works for both sides, your army and the AI's.
 
 ## Why
 
-In the base game, ammunition moves from an army's ammunition train into its regiments only at the end of each battle
+In the base game, ammunition moves from an army's ammunition train into its brigades only at the end of each battle
 day. During the day nothing refills, so units with high rate-of-fire weapons (breech-loaders, repeaters) and anyone in
 a long firefight run dry hours before dark, while the train sits full behind them.
 
 ## What it does
 
-Every few game minutes, each regiment that is short of ammunition and has been **quiet for 10 minutes** (not firing,
+Every few game minutes, each brigade that is short of ammunition and has been **quiet for 10 minutes** (not firing,
 not in melee, not under fire) draws ammunition from its own train, up to a full load per game hour. It uses the game's
 own trains and bookkeeping:
 
@@ -19,12 +19,14 @@ own trains and bookkeeping:
 - the trains are finite, so a long fight can still exhaust them;
 - the game's own nightly refill is unchanged.
 
-So the tactic is the historical one: pull a regiment back out of the fight for a few minutes and it refills.
+So the tactic is the historical one: pull a brigade back out of the fight for a few minutes and it refills.
 
-If a brigade's own train is empty (a train shrinks when its headquarters takes losses), its regiments draw on the
+If a brigade's own train is empty (a train shrinks when its headquarters takes losses), it draws on the
 **nearest friendly train** that still has ammunition.
 
-Your own regiments show *Resupplying ammunition* and *Ammunition replenished* as they refill.
+With the Whiskey & Lemons DLC (or any campaign fought at regiment level) the same applies to each regiment.
+
+Your own brigades show *Resupplying ammunition* and *Ammunition replenished* as they refill.
 
 ## Install
 
@@ -59,12 +61,12 @@ After the first start with the mod, `BepInEx\config\gtcw.battleresupply.cfg` hol
 
 | Setting | Default | What it does |
 |---|---|---|
-| `RefillPerHour` | 1 | Share of a full load a quiet regiment can draw per game hour. |
-| `QuietMinutes` | 10 | Minutes without firing, melee or receiving fire before a regiment can refill. |
+| `RefillPerHour` | 1 | Share of a full load a quiet brigade can draw per game hour. |
+| `QuietMinutes` | 10 | Minutes without firing, melee or receiving fire before a brigade can refill. |
 | `StepMinutes` | 5 | How often (game minutes) resupply is applied. |
-| `ShowText` | true | Floating text over your own regiments as they refill. |
-| `CommanderRange` | 0 | If above 0, a regiment must be within this distance (map units) of its brigade headquarters. 0 = off. |
-| `BorrowTrains` | true | A regiment whose own train is empty draws on the nearest friendly train. |
+| `ShowText` | true | Floating text over your own brigades as they refill. |
+| `CommanderRange` | 0 | If above 0, a brigade must be within this distance (map units) of its headquarters. 0 = off. |
+| `BorrowTrains` | true | A brigade whose own train is empty draws on the nearest friendly train. |
 | `BorrowRange` | 0 | If above 0, a borrowed train must be within this distance. 0 = any distance. |
 | `Hourly` (Log) | true | Each game hour, write both armies' ammunition state and your trains to the log. |
 
@@ -78,7 +80,7 @@ Your trains at 05:00:
     1st Kentucky Inf. Bgd.: train 3900 men-loads; 5 short, 0 quiet, 0 refilling, 3 firing, 2 under fire
 ```
 
-so you can see whether a brigade isn't refilling because of its train or because its regiments are still in the fight.
+so you can see whether a brigade isn't refilling because of its train or because its men are still in the fight.
 
 ## Building from source
 
